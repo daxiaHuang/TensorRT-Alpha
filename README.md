@@ -92,8 +92,9 @@ Installation Tutorial：
 - docker for linux (waiting for update)<br>
 - [图文详细版：Windows10环境配置](http://t.csdn.cn/EwNUU)<br>
    版本：cuda11.2 cudnn8.2.1 tensorrt8.4.2.4 opencv4.6<br>
-   导出onnx:yolo mode=export model=yolov8s.pt format=onnx dynamic=True    #simplify=True<br>
-   编译onnx：
+   导出onnx:<br>
+   yolo mode=export model=yolov8s.pt format=onnx dynamic=True    #simplify=True<br>
+   编译onnx:<br>
    trtexec --onnx=yolov8s.onnx --saveEngine=yolov8s.trt --buildOnly --minShapes=images:1x3x640x640 --optShapes=images:4x3x640x64 --maxShapes=images:8x3x640x64<br>
    trtexec --onnx=yolov8s.onnx  --saveEngine=yolov8s.trt --fp16 --buildOnly --minShapes=images:1x3x640x640 --optShapes=images:4x3x640x64 --maxShapes=images:8x3x640x64<br>
 
