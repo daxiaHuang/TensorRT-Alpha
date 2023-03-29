@@ -96,7 +96,7 @@ Installation Tutorial：
    yolo mode=export model=yolov8s.pt format=onnx dynamic=True    #simplify=True<br>
    编译onnx:<br>
    trtexec --onnx=yolov8s.onnx --saveEngine=yolov8s.trt --buildOnly --minShapes=images:1x3x640x640 --optShapes=images:4x3x640x64 --maxShapes=images:8x3x640x64<br>
-   trtexec --onnx=yolov8s.onnx  --saveEngine=yolov8s.trt --fp16 --buildOnly --minShapes=images:1x3x640x640 --optShapes=images:4x3x640x64 --maxShapes=images:8x3x640x64<br>
+   trtexec --onnx=yolov8s.onnx  --saveEngine=yolov8s.trt --fp16 --buildOnly --minShapes=images:1x3x640x640 --optShapes=images:4x3x640x64 --maxShapes=images:8x3x640x64  #float16 精度降低,速度更快<br>
 
 
 ## Quick Start
